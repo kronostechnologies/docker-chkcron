@@ -1,5 +1,6 @@
 FROM python:alpine
 
+RUN apk add --no-cache ca-certificates
 RUN pip install chkcrontab
 
 COPY docker-entrypoint.sh /usr/local/bin/
